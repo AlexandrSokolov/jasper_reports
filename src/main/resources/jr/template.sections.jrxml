@@ -8,11 +8,19 @@
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="79" splitType="Stretch">
+		<band height="103" splitType="Stretch">
 			<textField>
 				<reportElement x="227" y="20" width="100" height="30" uuid="788338f9-0639-48c2-a653-ada891fead79"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA["Title"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="0" width="124" height="30" uuid="f881f983-2e54-4cff-9836-724c20308851"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER} + " of " + $V{PAGE_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="421" y="30" width="122" height="30" uuid="af554b15-fa7f-42c1-b4e0-5e69e6355ae2"/>
+				<textFieldExpression><![CDATA["Date: " + new SimpleDateFormat("dd/MM/yy").format(new Date())]]></textFieldExpression>
 			</textField>
 		</band>
 	</title>
