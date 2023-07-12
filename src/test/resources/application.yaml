@@ -1,0 +1,11 @@
+jr:
+  template:
+    name: "template.sections.jrxml"
+  file:
+    name: "template.sections.pdf"
+
+logging:
+  level:
+    root: info
+    org:
+      springframework: info

@@ -1,0 +1,9 @@
+jr:
+  template:
+    name: "template.sections.jrxml"
+
+logging:
+  level:
+    root: info
+    org:
+      springframework: info
