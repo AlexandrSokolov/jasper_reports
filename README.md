@@ -4,8 +4,9 @@
 * [TIBCO Jaspersoft Studio User Guide](https://community.jaspersoft.com/documentation/v600-v601/tibco-jaspersoft-studio-user-guide)
 * [JasperReports Tutorial](https://www.tutorialspoint.com/jasper_reports/index.htm)
 
-Grouped by themas:
-* [Report Templates](docs/Report_Templates.md)
+When you start woking with Jasper reports you must understand:
+* [Report Templates Structure](docs/Report_Templates.md)
+* [Passing data into the report]
 * [Report Elements](docs/Report_Elements.md)
 * [Tables](docs/Tables.md)
 

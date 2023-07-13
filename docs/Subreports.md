@@ -1,0 +1,1 @@
+Define subreport as a usual report, test all the required data as it is a main report and check how it is generated.
