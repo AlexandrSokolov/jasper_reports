@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Subreport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f7917ee5-66d7-4c42-b573-9a62d6e7b27c">
+	<property name="com.jaspersoft.studio.report.description"/>
+	<parameter name="TEST_PARAMETER" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="testField" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="89" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="140" height="79" uuid="380ee547-a0c7-4e0a-b794-c5823a4178c4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Sub report title - label]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="140" y="0" width="140" height="79" uuid="caa76857-7a62-44a7-892c-a60459c42771"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Sub report title - `TEST_PARAMETER` parameter:  " + $P{TEST_PARAMETER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="278" y="0" width="142" height="79" uuid="db9daa33-9f03-4368-9b09-bc27478143a3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Sub report title - `TEST_FIELD` field:  " + $F{testField}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="84" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="140" height="79" uuid="545411b8-b65f-430e-90f4-e76291a9e430"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Sub report HEADER - label]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="140" y="0" width="140" height="79" uuid="4dd72673-6700-4804-825a-33c53fb79d29"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Sub report HEADER - `TEST_PARAMETER` parameter:  " + $P{TEST_PARAMETER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="140" height="79" uuid="270119de-c6dd-4b2e-a470-b38322e6f60a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Sub report HEADER - `TEST_FIELD` field:  " + $F{testField}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="280" y="0" width="140" height="79" uuid="143b77a5-1f34-44f4-9bec-b42977012516"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Sub report DETAIL - `TEST_FIELD` field:  " + $F{testField}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="140" height="79" uuid="9cd357f8-d00d-4e2f-8550-97c83b1abeb3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Sub report DETAIL - label]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="140" y="0" width="140" height="79" uuid="19be91a8-fece-4d90-b4d3-f3642e718b00"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Sub report DETAIL - `TEST_PARAMETER` parameter:  " + $P{TEST_PARAMETER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

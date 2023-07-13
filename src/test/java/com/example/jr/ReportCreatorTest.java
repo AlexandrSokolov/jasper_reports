@@ -1,9 +1,8 @@
 package com.example.jr;
 
+import net.sf.jasperreports.engine.JRParameter;
 import org.apache.commons.io.FileUtils;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.io.TempDir;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -12,14 +11,9 @@ import org.springframework.test.context.ContextConfiguration;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.sql.SQLOutput;
 import java.util.HashMap;
-import java.util.Optional;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import java.util.Locale;
+import java.util.Map;
 
 @SpringBootTest
 @ContextConfiguration(classes = { ReportConfiguration.class })
@@ -34,8 +28,11 @@ public class ReportCreatorTest {
   private String pdfReportName;
 
   @Test
-  public void testCreatePdfReport() throws IOException {
-    ReportData reportData = new ReportData(new HashMap<>());
+  public void testCreatePdfReport() {
+    Map<String, Object> map = new HashMap<>();
+    map.put(JRParameter.REPORT_LOCALE, new Locale("de", "DE") );
+
+    ReportData reportData = new ReportData(map);
 
     try(InputStream pdfReport = reportCreator.createPdfReport(reportData)) {
       File newReportPath = new File("target", pdfReportName);
