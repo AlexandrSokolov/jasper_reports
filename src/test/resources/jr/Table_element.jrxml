@@ -117,7 +117,7 @@
 							<textField>
 								<reportElement key="" x="0" y="0" width="81" height="30" uuid="d825e74f-c505-4562-a01a-d05bfc2ef3a3"/>
 								<box topPadding="0" leftPadding="5" bottomPadding="0" rightPadding="0"/>
-								<textFieldExpression><![CDATA[java.text.NumberFormat.getInstance(Locale.GERMANY).getCurrencyInstance().format($F{money})]]></textFieldExpression>
+								<textFieldExpression><![CDATA[java.text.NumberFormat.getCurrencyInstance(new Locale("de", "DE")).format($F{money})]]></textFieldExpression>
 							</textField>
 						</jr:detailCell>
 					</jr:column>
