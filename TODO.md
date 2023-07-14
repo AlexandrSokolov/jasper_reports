@@ -1,4 +1,27 @@
+### describe variablees evaluation:
+
+			<textField evaluationTime="Report">
+				<reportElement x="421" y="0" width="124" height="30" uuid="f881f983-2e54-4cff-9836-724c20308851"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER} + " of " + $V{PAGE_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="421" y="30" width="122" height="30" uuid="af554b15-fa7f-42c1-b4e0-5e69e6355ae2"/>
+				<textFieldExpression><![CDATA["Date: " + new SimpleDateFormat("dd.MM.yyyy").format(new Date())]]></textFieldExpression>
+			</textField>
+		</band>
+
+####
+
+simple master/subreport with static labels to make sure it works
+complex structure based on a single report (passing table data into via field)
+merging independent pdf files
+
 /home/alex/projects/private/jasper_reports/src/test/resources/jr/Subreports_via_parameters.jrxml
+
+### Merge pdf:
+https://www.geeksforgeeks.org/merging-pdfs-using-java/
+https://stackoverflow.com/questions/3585329/how-to-merge-two-pdf-files-into-one-in-java
+
 
 ### Passing parameters to the template.sections.xml
 ### Subreports
