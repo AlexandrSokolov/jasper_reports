@@ -10,7 +10,28 @@
 			</textField>
 		</band>
 
-####
+#### you cannot pass empty list to:
+
+and that // JR cannot use immutable map! 
+
+new JRBeanCollectionDataSource(Collections.emptyList()));
+
+You'll get an empty report. You must use speial datasource: JREmptyDataSource
+
+If list might be useful and it is still a valid report, 
+use a wrapper method insead of construction of `JREmptyDataSource`/`JRBeanCollectionDataSource`:
+```java
+private JRDataSource jrDataSource(List<?> items) {
+    if (items == null || items.isEmpty()) {
+      return new JREmptyDataSource();
+    } else {
+      return new JRBeanCollectionDataSource(items);
+    }
+  }
+```
+
+
+#####
 
 simple master/subreport with static labels to make sure it works
 complex structure based on a single report (passing table data into via field)
