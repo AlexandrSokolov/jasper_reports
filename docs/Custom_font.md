@@ -11,7 +11,8 @@
 * [Export the Font Extension](#export-the-font-extension)
 * [Import the Font Extension into Jasper Studio](#import-the-font-extension-into-jasper-studio)
 * [Import the Font Extension into your project](#import-the-font-extension-into-your-project)
-* [Make the new font as a default one]
+* [Make the new font as a default one](#make-the-new-font-as-a-default-one)
+* [Sharing project between different developers](#sharing-project-between-different-developers)
 
 ### Options and motivation of having JasperReports `Font Extension`
 
@@ -140,10 +141,11 @@ A default style is characterized by the isDefault flag attribute:
 
 Note: when you search for a `MyCustomFont` font it won't appear in the fonts list. Just copy-and-paste it.
 
-#### custom font
+### Sharing project between different developers
 
-https://stackoverflow.com/questions/29519804/adding-a-font-to-a-jasper-report
-https://medium.com/@seymorethrottle/jasper-reports-adding-custom-fonts-589b55a52e7c
-https://community.jaspersoft.com/wiki/custom-font-font-extension
-https://thegeekyasian.com/add-custom-fonts-to-jasper-report-in-java-project-jaspersoft/
+Right now if you want to open, build and run the js template in Jasper Studio, you must provide:
+
+* `.jrxml` template file
+* `.ttf` font files, to configure Jasper Studio during design phase (can also be extracted from the exported font `.jar` file)
+* `.jar` exported font file as a jar, to configure Jasper Studio at pdf export/preview time
 
