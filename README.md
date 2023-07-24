@@ -9,6 +9,7 @@ When you start woking with Jasper reports you must understand:
 * [Passing data into the report]
 * [Report Elements](docs/Report_Elements.md)
 * [Tables](docs/Tables.md)
+* [Custom fonts](docs/Custom_font.md)
 
 ### Download Jaspersoft Studio
 
