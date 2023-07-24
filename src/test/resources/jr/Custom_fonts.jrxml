@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Empty_jr_template" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f7917ee5-66d7-4c42-b573-9a62d6e7b27c">
+	<style name="Base" isDefault="true" fontName="MyCustomFont" isStrikeThrough="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<title>
+		<band height="150" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<frame>
+				<reportElement x="0" y="0" width="270" height="150" uuid="5163b6f8-9fc6-494a-8935-04a6d295bfa9"/>
+				<staticText>
+					<reportElement x="0" y="0" width="270" height="30" uuid="17060d53-cf0d-41e0-b10e-b2bdc11159d7"/>
+					<textElement>
+						<font size="16"/>
+					</textElement>
+					<text><![CDATA[CUSTOM FONT]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="40" width="270" height="30" uuid="ea24d35f-2dd7-4361-a25d-c885449db851"/>
+					<textElement>
+						<font size="16" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CUSTOM BOLD FONT]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="80" width="270" height="30" uuid="686c5542-66cb-45b5-9bd4-b6eca21f75bf"/>
+					<textElement>
+						<font size="16" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[CUSTOM ITALIC FONT]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="120" width="270" height="30" uuid="f4c0a988-9026-4ec6-adaa-a74d719cf364"/>
+					<textElement>
+						<font size="16" isBold="true" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[CUSTOM BOLD-ITALIC FONT]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="280" y="0" width="270" height="150" uuid="d93c36b5-189e-4644-ba82-6c542a7fc9f2"/>
+				<staticText>
+					<reportElement x="1" y="1" width="264" height="30" uuid="82904fec-a051-452e-84c7-ba5a77ee7c00"/>
+					<textElement>
+						<font fontName="SansSerif" size="16"/>
+					</textElement>
+					<text><![CDATA[SansSerif FONT]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="1" y="41" width="264" height="30" uuid="742d8b38-a446-4cb0-99b0-70787c3a76e4"/>
+					<textElement>
+						<font fontName="SansSerif" size="16" isBold="true"/>
+					</textElement>
+					<text><![CDATA[SansSerif BOLD FONT]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="1" y="81" width="264" height="30" uuid="f3943032-ef54-4fed-a742-ca544ba3225a"/>
+					<textElement>
+						<font fontName="SansSerif" size="16" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[SansSerif ITALIC FONT]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="1" y="121" width="264" height="30" uuid="02963d71-3154-4c3a-881d-eb8f1b335ed5"/>
+					<textElement>
+						<font fontName="SansSerif" size="16" isBold="true" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[SansSerif BOLD-ITALIC FONT]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+</jasperReport>
