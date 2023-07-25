@@ -8,8 +8,8 @@
 
 When you start woking with Jasper reports you must understand:
 * [Report Templates Structure](docs/Report_Templates.md)
-* [Passing data into the report]
 * [Report Elements](docs/Report_Elements.md)
+* [Passing data into the report]
 * [Tables](docs/Tables.md)
 * [Custom fonts](docs/Custom_font.md)
 
