@@ -10,7 +10,7 @@
 * [Create the Font Extension](#create-the-font-extension)
 * [Export the Font Extension](#export-the-font-extension)
 * [Import the Font Extension into Jasper Studio](#import-the-font-extension-into-jasper-studio)
-* [Import the Font Extension into your project](#import-the-font-extension-into-your-project)
+* [Import the Font Extension into your dev project](#import-the-font-extension-into-your-project)
 * [Make the new font as a default one](#make-the-new-font-as-a-default-one)
 * [Sharing project between different developers](#sharing-project-between-different-developers)
 
