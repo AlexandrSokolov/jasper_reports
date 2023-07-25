@@ -4,24 +4,35 @@
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
+	<field name="field1" class="java.lang.String"/>
+	<field name="field2" class="java.lang.String"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="103" splitType="Stretch">
+		<band height="105" splitType="Stretch">
 			<textField>
 				<reportElement x="227" y="20" width="100" height="30" uuid="788338f9-0639-48c2-a653-ada891fead79"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA["Title"]]></textFieldExpression>
 			</textField>
-			<textField evaluationTime="Report">
-				<reportElement x="421" y="0" width="124" height="30" uuid="f881f983-2e54-4cff-9836-724c20308851"/>
-				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER} + " of " + $V{PAGE_COUNT}]]></textFieldExpression>
-			</textField>
 			<textField pattern="HH:mm">
 				<reportElement x="421" y="30" width="122" height="30" uuid="af554b15-fa7f-42c1-b4e0-5e69e6355ae2"/>
 				<textFieldExpression><![CDATA["Date: " + new SimpleDateFormat("dd.MM.yyyy").format(new Date())]]></textFieldExpression>
 			</textField>
+			<textField>
+				<reportElement x="358" y="1" width="100" height="30" uuid="03dde9a6-5a59-4702-8cbc-1adc4fd756aa"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="458" y="1" width="100" height="30" uuid="7b5ab8c9-8d09-4ba1-9fbc-ae7be8ea666c"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<break>
+				<reportElement x="0" y="58" width="100" height="1" uuid="a6efae62-31c2-40d0-a9d1-888e677e63bd"/>
+			</break>
 		</band>
 	</title>
 	<pageHeader>
@@ -33,10 +44,21 @@
 				</textElement>
 				<textFieldExpression><![CDATA["Page header"]]></textFieldExpression>
 			</textField>
+			<textField>
+				<reportElement x="350" y="6" width="100" height="30" uuid="9b033f68-8a52-402a-9f28-f8a962cc6fa7"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="450" y="6" width="100" height="30" uuid="61c6f764-a9c1-438f-91b7-f5194c8a32ac"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
 		</band>
 	</pageHeader>
 	<columnHeader>
 		<band height="61" splitType="Stretch">
+			<printWhenExpression><![CDATA[$V{PAGE_NUMBER} != 2]]></printWhenExpression>
 			<textField>
 				<reportElement x="230" y="10" width="100" height="30" uuid="dccbb190-d5be-49c0-aca8-0718028a2a72"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -48,15 +70,52 @@
 	</columnHeader>
 	<detail>
 		<band height="125" splitType="Stretch">
+			<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 2]]></printWhenExpression>
+			<staticText>
+				<reportElement x="0" y="0" width="354" height="30" uuid="c30382c0-d97a-470c-b0bc-a39378be44d8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Title 2nd "title" page, defined as "Detail Band"]]></text>
+			</staticText>
+			<break>
+				<reportElement x="0" y="109" width="100" height="1" uuid="8f24fb79-905b-4e45-b938-459a639aef3b"/>
+			</break>
+		</band>
+		<band height="178">
 			<textField>
-				<reportElement mode="Opaque" x="230" y="30" width="100" height="30" uuid="ef786f38-67f9-479f-9431-f29263e03c33"/>
+				<reportElement mode="Opaque" x="227" y="10" width="100" height="30" uuid="ef786f38-67f9-479f-9431-f29263e03c33"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA["Report Details"]]></textFieldExpression>
 			</textField>
+			<frame>
+				<reportElement x="0" y="60" width="280" height="80" uuid="abb4a3b9-9d0f-4dbc-b47a-ec53933a76e0"/>
+				<staticText>
+					<reportElement x="10" y="10" width="80" height="30" uuid="b362efe4-81f5-4471-876b-c6f2735583ce"/>
+					<text><![CDATA[Field 1:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="103" y="13" width="100" height="30" uuid="d9309d21-1e9b-424b-9ad2-15296a48c460"/>
+					<textFieldExpression><![CDATA[$F{field1}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="310" y="60" width="200" height="80" uuid="aed32b0a-929f-47f1-b663-49ee8ea0f77f"/>
+				<staticText>
+					<reportElement x="10" y="10" width="60" height="30" uuid="45be0afb-0163-4877-9e0e-9062799864cc"/>
+					<text><![CDATA[Field 2:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="80" y="10" width="100" height="30" uuid="d80d29fc-c747-464f-a1c4-5b6bc1ac26bb"/>
+					<textFieldExpression><![CDATA[$F{field2}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<break>
+				<reportElement x="0" y="163" width="100" height="1" uuid="591d447f-4fc8-4f42-bef9-3536b00968c8"/>
+			</break>
 		</band>
 	</detail>
 	<columnFooter>
 		<band height="51" splitType="Stretch">
+			<printWhenExpression><![CDATA[$V{PAGE_NUMBER} != 2]]></printWhenExpression>
 			<textField>
 				<reportElement x="230" y="10" width="100" height="30" uuid="85cb4116-64b0-4b9c-8c4b-e17a99523af9"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
@@ -65,11 +124,15 @@
 		</band>
 	</columnFooter>
 	<pageFooter>
-		<band height="54" splitType="Stretch">
+		<band height="60" splitType="Stretch">
 			<textField>
 				<reportElement x="230" y="12" width="100" height="30" uuid="2421ab9f-779b-486a-a673-2ea248f5b0f0"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA["Page footer"]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="428" y="17" width="122" height="30" uuid="d4dd318e-e295-4532-9b76-3f6502627c54"/>
+				<textFieldExpression><![CDATA["Date: " + new SimpleDateFormat("dd.MM.yyyy").format(new Date())]]></textFieldExpression>
 			</textField>
 		</band>
 	</pageFooter>

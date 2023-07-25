@@ -2,7 +2,7 @@ jr:
   template:
     name: "template.sections.jrxml"
   file:
-    name: "template.sections.pdf"
+    name: "JR_Template_Sections.pdf"
 
 logging:
   level:

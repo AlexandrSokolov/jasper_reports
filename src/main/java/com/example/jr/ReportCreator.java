@@ -25,7 +25,7 @@ public class ReportCreator {
       JasperPrint jasperPrint = JasperFillManager.fillReport(
         jasperReport,
         reportData.reportParameters(), //cannot be immutable
-        new JREmptyDataSource());
+        reportData.mainDatasource());
 
       JasperExportManager.exportReportToPdfStream(
         jasperPrint,

@@ -60,12 +60,53 @@ https://jasperreports.sourceforge.net/sample.reference/nopagebreak/index.html
 
 page break, if it is thef irst element is the details is ignored for the first page!
 as a result page break must be defined additionally as the last element of the title!!!
+
+Multi page layout of the title band and the height issue
+https://stackoverflow.com/questions/76702371/title-band-height-with-multiple-pages
+
 #####
 https://community.jaspersoft.com/questions/1100336/data-multiple-tables-overlapping-each-other
 
 https://community.jaspersoft.com/documentation/tibco-jaspersoft-studio-user-guide/v60/using-frames
 
 https://community.jaspersoft.com/questions/1113571/how-configure-text-fields-url
+
+#### image
+https://stackoverflow.com/questions/36457059/jasperreports-api-getting-error-when-using-image-in-report-net-sf-jasperreport
+
+do not use InputStream, as a property type for image, you must close it. 
+-When you try to load image twice as inputstream it you'll get:
+Caused by: java.io.IOException: The byte array is not a recognized imageformat.
+for instance for logo on each page
+
+Use:
+```xml
+<parameter name="bmLogo" class="java.awt.image.BufferedImage"/>
+```
+Instead of:
+```xml
+<parameter name="logo" class="java.io.InputStream"/>
+```
+
+and java code:
+```java
+import javax.imageio.ImageIO;
+import net.sf.jasperreports.engine.util.JRLoader;
+
+...
+try (InputStream logo = Thread.currentThread().getContextClassLoader().getResourceAsStream("images/logo.png")) {
+    map.put(
+      "logo",
+      ImageIO.read(new ByteArrayInputStream(JRLoader.loadBytes(logo))));
+    } catch (IOException | JRException e) {
+      throw new IllegalStateException(e);
+    }
+```
+instead of:
+```java
+
+```
+
 
 #####
 Exporting Multiple Reports into a Single Output File (Batch Export)
