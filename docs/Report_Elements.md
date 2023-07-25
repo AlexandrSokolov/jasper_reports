@@ -9,6 +9,7 @@ Some specific notes on the elements:
 * [Frame - a container of elements](#frame---a-container-of-elements)
 * [Table element](#table-element)
 * [Image](#image)
+* [Page break](#page-break)
 
 ### `Page Number` and `Page X of Y`
 
@@ -72,3 +73,14 @@ try (InputStream logo = Thread.currentThread().getContextClassLoader()
   throw new IllegalStateException(e);
 }
 ```
+
+### Page break
+
+You might have certain issues with page break.
+
+For instance, you cannot use the whole area of the page after the page break.
+
+It might be useful, after Page break create a new Detail Band, to avoid issue with a limit of the height of a band.
+
+See details on: [Multiple pages that appear only once at the beginning of the report](../docs/Report_Templates.md#multiple-pages-that-appear-only-once-at-the-beginning-of-the-report)
+
