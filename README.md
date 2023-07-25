@@ -1,6 +1,8 @@
 
 ### Documentation and tutorials:
 
+* [The JasperReports Ultimate Guide Third Edition](https://jasperreports.sourceforge.net/JasperReports-Ultimate-Guide-3.pdf)
+* [The JasperReports Ultimate Guide Third Edition (local version)](docs/JasperReports-Ultimate-Guide-3.pdf)
 * [TIBCO Jaspersoft Studio User Guide](https://community.jaspersoft.com/documentation/v600-v601/tibco-jaspersoft-studio-user-guide)
 * [JasperReports Tutorial](https://www.tutorialspoint.com/jasper_reports/index.htm)
 
