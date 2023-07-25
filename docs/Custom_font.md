@@ -117,7 +117,24 @@ Add a Maven system-scoped dependency that points to the jar:
     </dependency>
 ```
 
-Note: the values of the `groupId`, `artifactId`, and `version` it seems do not matter.
+If you use Spring Boot, configure its `spring-boot-maven-plugin` additionally with `includeSystemScope`:
+```xml
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <includeSystemScope>true</includeSystemScope>
+          <layers>
+            <enabled>true</enabled>
+          </layers>
+        </configuration>
+      </plugin>
+```
+
+Then the custom font jar will be saved as `/BOOT-INF/lib/local.jasperFontOverrides-1.0.jar`, 
+but not as original `myCustomFont.jar`
+
+Note: the values of the `groupId`, `artifactId`, and `version` affect only the name of the generated font jar file.
 
 If font is not avaible via this dependency you'll get an exception:
 ```text
@@ -146,6 +163,7 @@ Note: when you search for a `MyCustomFont` font it won't appear in the fonts lis
 Right now if you want to open, build and run the js template in Jasper Studio, you must provide:
 
 * `.jrxml` template file
+* name of the custom font. It must be the same, as used in the template.
 * `.ttf` font files, to configure Jasper Studio during design phase (can also be extracted from the exported font `.jar` file)
-* `.jar` exported font file as a jar, to configure Jasper Studio at pdf export/preview time
+* `.jar` exported font file as a jar, to configure Jasper Studio at pdf preview and export time
 
