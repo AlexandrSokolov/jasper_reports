@@ -83,5 +83,5 @@ For instance, you cannot use the whole area of the page after the page break.
 
 It might be useful, after Page break create a new Detail Band, to avoid issue with a limit of the height of a band.
 
-See details on: [Multiple pages that appear only once at the beginning of the report](../docs/Report_Templates.md#multiple-pages-that-appear-only-once-at-the-beginning-of-the-report)
+See details on: [Multiple pages that appear only once at the beginning of the report](../docs/Report_Template_Sections.md#multiple-pages-that-appear-only-once-at-the-beginning-of-the-report)
 

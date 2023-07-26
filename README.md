@@ -7,7 +7,7 @@
 * [JasperReports Tutorial](https://www.tutorialspoint.com/jasper_reports/index.htm)
 
 When you start woking with Jasper reports you must understand:
-* [Report Templates Structure](docs/Report_Templates.md)
+* [Report Template Sections](docs/Report_Template_Sections.md)
 * [Report Elements](docs/Report_Elements.md)
 * [Passing data into the report]
 * [Tables](docs/Tables.md)
