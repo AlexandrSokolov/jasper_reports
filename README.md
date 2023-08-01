@@ -1,3 +1,12 @@
+### Note:
+
+You cannot build the whole project, it fails cause of:
+```qute
+ Execution repackage of goal org.springframework.boot:spring-boot-maven-plugin:3.1.1:repackage failed: Unable to find main class
+```
+
+The project is created as a demo project to see JR Templates in the JR Studio 
+and run tests manually to open the generated reports immediately.
 
 ### Documentation and tutorials:
 
@@ -6,12 +15,13 @@
 * [TIBCO Jaspersoft Studio User Guide](https://community.jaspersoft.com/documentation/v600-v601/tibco-jaspersoft-studio-user-guide)
 * [JasperReports Tutorial](https://www.tutorialspoint.com/jasper_reports/index.htm)
 
-When you start woking with Jasper reports you must understand:
+When you start working with Jasper Reports you must understand:
 * [Report Template Sections](docs/Report_Template_Sections.md)
 * [Report Elements](docs/Report_Elements.md)
-* [Passing data into the report]
-* [Tables](docs/Tables.md)
+* [Data passing into the report](docs/Data_Passing.md)
+* [Table Element](docs/Table.element.md)
 * [Custom fonts](docs/Custom_font.md)
+* JR Report Generation Workflow. See [ReportAbstractBaseTest#generateReport](src/test/java/com/example/jr/ReportAbstractBaseTest.java)
 
 ### Download Jaspersoft Studio
 
