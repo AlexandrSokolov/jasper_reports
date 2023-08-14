@@ -3,8 +3,6 @@ package com.example.jr;
 import com.example.jr.dto.CompanyHistory;
 import com.example.jr.dto.EducationHistory;
 import com.example.jr.dto.Employee;
-import net.sf.jasperreports.engine.JREmptyDataSource;
-import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
